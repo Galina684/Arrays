@@ -1,3 +1,4 @@
+import java.util.Arrays;
 
 public class Main {
     public static void main(String[] args) {
@@ -17,46 +18,57 @@ public class Main {
         for (int index = 0; index < a.length; index++) {
             if (index == a.length - 1) {
                 System.out.println(a[index]);
-                break;
+            } else {
+                System.out.print(a[index] + ", ");
             }
-            System.out.print(a[index] + ", ");
         }
-
         for (int index = 0; index < b.length; index++) {
             if (index == b.length - 1) {
                 System.out.println(b[index]);
-                break;
+            } else {
+                System.out.print(b[index] + ", ");
             }
-            System.out.print(b[index] + ", ");
         }
-
         for (int index = 0; index < c.length; index++) {
             if (index == c.length - 1) {
                 System.out.println(c[index]);
-                break;
+            } else {
+                System.out.print(c[index] + ", ");
             }
-            System.out.print(c[index] + ", ");
         }
         System.out.println("Задача 3");
 
         for (int index = a.length - 1; index >= 0; index--) {
-            System.out.print(a[index] + ", ");
+            if (index == 0) {
+                System.out.print(a[index]);
+            } else {
+                System.out.print(a[index] + ", ");
+            }
         }
         System.out.println();
+
         for (int indexb = b.length - 1; indexb >= 0; indexb--) {
-            System.out.print(b[indexb] + ", ");
+            if (indexb == 0) {
+                System.out.print(b[indexb]);
+            } else {
+                System.out.print(b[indexb] + ", ");
+            }
         }
         System.out.println();
         for (int indexc = c.length - 1; indexc >= 0; indexc--) {
-            System.out.print(c[indexc] + ", ");
+            if (indexc == 0) {
+                System.out.print(c[indexc]);
+            } else {
+                System.out.print(c[indexc] + ", ");
+            }
         }
         System.out.println();
         System.out.println("Задача 4");
         for (int index = 0; index < a.length; index++) {
-            if (index % 2 == 0) {
-                System.out.print(a[index] + 1 + ", ");
-            } else
-                System.out.print(a[index] + ", ");
+            if (a[index] % 2 != 0) {
+                a[index]++;
+            }
         }
+        System.out.println(Arrays.toString(a));
     }
 }
